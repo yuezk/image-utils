@@ -1,0 +1,34 @@
+{
+  "name": "image-utils",
+  "version": "0.0.0",
+  "description": "Utils for image operation in borwser.",
+  "main": "./lib/index.js",
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "scripts": {
+    "dist": "babel ./src --out-dir ./lib --presets es2015,stage-0 && webpack ./lib/index.js ./dist/image-utils.js --output-library ImageUtils --output-library-target umd && uglifyjs ./dist/image-utils.js -mc -o ./dist/image-utils.min.js",
+    "serve": "live-server",
+    "example": "npm run dist && npm run serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuezk/image-utils.git"
+  },
+  "keywords": [],
+  "author": "Kevin Yue <yuezk001@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuezk/image-utils/issues"
+  },
+  "homepage": "https://github.com/yuezk/image-utils#readme",
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "live-server": "^0.9.1",
+    "uglify-js": "^2.6.1",
+    "webpack": "^1.12.12"
+  }
+}

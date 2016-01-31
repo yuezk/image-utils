@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>compress example</title>
+    <script src="../dist/image-utils.js"></script>
+</head>
+<body>
+    <input type="file" id="file-field"/>
+
+    <script>
+        var fileInput = document.querySelector('#file-field');
+
+        fileInput.onchange = function () {
+            var file = fileInput.files[0];
+            if (!file) return;
+
+            ImageUtils.compress(file, { quality: 0.1, blob: true }, function (err, src) {
+                if (err) {
+                    return console.log(err);
+                }
+
+                console.log(src);
+            });
+        };
+    </script>
+</body>
+</html>
