@@ -10,7 +10,8 @@
   "scripts": {
     "dist": "babel ./src --out-dir ./lib --presets es2015,stage-0 && webpack ./lib/index.js ./dist/image-utils.js --output-library ImageUtils --output-library-target umd && uglifyjs ./dist/image-utils.js -mc -o ./dist/image-utils.min.js",
     "serve": "live-server",
-    "example": "npm run dist && npm run serve"
+    "example": "npm run dist && npm run serve",
+    "prepublish": "npm run dist"
   },
   "repository": {
     "type": "git",
