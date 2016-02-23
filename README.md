@@ -37,6 +37,8 @@ npm install image-utils --save
 
 ### dataURIToBlob()
 
-### compress
+### compress()
 
 ## LICENSE
+
+[MIT](LICENSE)
